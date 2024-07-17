@@ -13,7 +13,9 @@ from inline_btn import *
 
 TOKEN = "7087349542:AAFGo_n13L2XDJ8IFgEvuwrGdSUtS4LqkGU"
 
-bot = Bot(TOKEN, parse_mode="HTML")
+PROXY_URL = "http://proxy.server:3128"
+
+bot = Bot(TOKEN, parse_mode="HTML", proxy=PROXY_URL)
 storage = MemoryStorage()
 dp = Dispatcher(bot=bot, storage=storage)
 database = DatabaseManager("fast_food.db")
